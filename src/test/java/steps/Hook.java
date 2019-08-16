@@ -43,7 +43,11 @@ public class Hook extends BaseUtil{
         
         
     }
-
+    
+    @Before
+    public void beforeScenarioStart(){
+        System.out.println("-----------------Start of Scenario-----------------");
+    } 
 
     @After
     public void TearDownTest(Scenario scenario) {
