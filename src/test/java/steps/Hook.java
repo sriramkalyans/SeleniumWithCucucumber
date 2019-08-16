@@ -27,9 +27,7 @@ public class Hook extends BaseUtil{
     {
         System.out.println("-----------------Start of Scenario-----------------");
         
-        scenarioDef = base.features.createNode(scenario.getName());
-
-        System.out.println("Opening the browser : Chrome");
+         System.out.println("Opening the browser : Chrome");
 
 
 
@@ -40,6 +38,10 @@ public class Hook extends BaseUtil{
         opt.addArguments("disable-extensions");
         opt.addArguments("--start-maximized");
         base.Driver = new ChromeDriver(opt);
+        
+        scenarioDef = base.features.createNode(scenario.getName());
+
+       
         base.Driver.get("http://www.executeautomation.com/demosite/Login.html");
     } 
 
