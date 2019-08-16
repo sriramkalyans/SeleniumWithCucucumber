@@ -32,7 +32,14 @@ public class Hook extends BaseUtil{
 
         //Chrome driver
         System.setProperty("webdriver.chrome.driver", "C:\\Libs\\chromedriver.exe");
+        opt.addArguments("disable-extensions");
+        opt.addArguments("--start-maximized");
+        capabilities= DesiredCapabilities.chrome();
+        capabilities.setBrowserName(DesiredCapabilities.chrome().getBrowserName());
         base.Driver = new ChromeDriver();
+       
+        
+        
     }
 
 
